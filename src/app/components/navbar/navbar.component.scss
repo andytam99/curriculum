@@ -1,0 +1,5 @@
+.dirs {
+  & > a {
+    @apply h-full flex items-center px-6 hover:bg-gray-50;
+  }
+}
