@@ -30,6 +30,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { SlideComponent } from './components/slide/slide.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { FormComponent } from './components/form/form.component';
+import { InicioComponent } from './pages/inicio/inicio.component';
+import { ValoresComponent } from './pages/valores/valores.component';
+import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
+import { MembresiaComponent } from './pages/membresia/membresia.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,10 @@ import { FormComponent } from './components/form/form.component';
     SlideComponent,
     CarouselComponent,
     FormComponent,
+    InicioComponent,
+    ValoresComponent,
+    VoluntariadoComponent,
+    MembresiaComponent,
   ],
   imports: [
     SwiperModule,
