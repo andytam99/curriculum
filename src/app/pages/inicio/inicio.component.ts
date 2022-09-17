@@ -1,15 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { ContentfulService } from 'src/app/services/contentful/contentful.service';
+import { Entry } from 'contentful';
+import { Blogs } from 'src/app/interfaces/blogs';
 
 @Component({
   selector: 'app-inicio',
   templateUrl: './inicio.component.html',
-  styleUrls: ['./inicio.component.scss']
+  styleUrls: ['./inicio.component.scss'],
 })
 export class InicioComponent implements OnInit {
+  blogs: Entry<Blogs>[] = [];
 
-  constructor() { }
+  constructor(private contentfulService: ContentfulService) {}
 
-  ngOnInit(): void {
+  getBlogs() {
+    this.contentfulService.getBlogs().then((res) => {
+      this.blogs = res;
+      console.log(res);
+    });
   }
 
+  ngOnInit(): void {
+    this.getBlogs();
+  }
 }

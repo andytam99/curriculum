@@ -1,7 +1,7 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -34,6 +34,9 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { ValoresComponent } from './pages/valores/valores.component';
 import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.component';
 import { MembresiaComponent } from './pages/membresia/membresia.component';
+import { ContentfulService } from './services/contentful/contentful.service';
+import { BlogComponent } from './pages/blog/blog.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -52,8 +55,12 @@ import { MembresiaComponent } from './pages/membresia/membresia.component';
     ValoresComponent,
     VoluntariadoComponent,
     MembresiaComponent,
+    BlogComponent,
   ],
   imports: [
+    MarkdownModule.forRoot({
+      loader: HttpClient
+    }),
     SwiperModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
@@ -72,7 +79,7 @@ import { MembresiaComponent } from './pages/membresia/membresia.component';
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [ContentfulService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

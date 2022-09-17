@@ -1,0 +1,28 @@
+<div *ngIf="loading; else loadElse" class="flex items-center justify-center w-full h-screen">
+    <span class="text-xl">Loading...</span>
+</div>
+
+<ng-template #loadElse>
+
+    <section *ngIf="blog; else nullBlock" class="flex flex-col items-center justify-center w-full h-auto">
+
+        <div class="w-full h-auto">
+            <img src="{{blog.fields.heroImage.fields.file.url}}" class="w-full h-auto max-h-96 object-cover" />
+            <div class="bg-gray-100 w-full p-10 flex flex-col items-center justify-center">
+                <span class="w-full max-w-[85ch]">
+                    <h1>{{blog.fields.title}}</h1>
+                    <p>{{blog.fields.publishDate | date}}</p>
+                </span>
+            </div>
+        </div>
+
+        <article markdown class="prose prose-xl prose-gray py-10 px-10 md:px-0" [data]="blog.fields.body">
+        </article>
+
+    </section>
+
+    <ng-template #nullBlock>
+        <h1>Not Found</h1>
+    </ng-template>
+
+</ng-template>
