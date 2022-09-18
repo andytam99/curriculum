@@ -10,6 +10,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './services/data/in-memory-data.service';
@@ -20,11 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SwiperModule } from 'swiper/angular';
 
-import { HeroesComponent } from './components/heroes/heroes.component';
-import { HeroDetailComponent } from './components/hero-detail/hero-detail.component';
 import { MessagesComponent } from './messages/messages.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HeroSearchComponent } from './components/hero-search/hero-search.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SlideComponent } from './components/slide/slide.component';
@@ -36,16 +33,13 @@ import { VoluntariadoComponent } from './pages/voluntariado/voluntariado.compone
 import { MembresiaComponent } from './pages/membresia/membresia.component';
 import { ContentfulService } from './services/contentful/contentful.service';
 import { BlogComponent } from './pages/blog/blog.component';
-import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { MarkdownModule } from 'ngx-markdown';
+import { BlogsComponent } from './pages/blogs/blogs.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent,
-    HeroSearchComponent,
     NavbarComponent,
     HeaderComponent,
     SlideComponent,
@@ -56,10 +50,11 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
     VoluntariadoComponent,
     MembresiaComponent,
     BlogComponent,
+    BlogsComponent,
   ],
   imports: [
     MarkdownModule.forRoot({
-      loader: HttpClient
+      loader: HttpClient,
     }),
     SwiperModule,
     HttpClientModule,
@@ -69,6 +64,7 @@ import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatTabsModule,
     MatToolbarModule,
     MatOptionModule,
     MatSelectModule,

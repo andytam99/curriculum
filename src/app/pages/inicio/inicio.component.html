@@ -1,25 +1,61 @@
-<section class="min-h-screen h-auto bg-gray-100 p-10">
+<!-- PORTAFOLIO -->
 
-    <h1 class="mb-5">HOME</h1>
+<section class="w-full h-auto min-h-screen p-20">
+    <app-carousel></app-carousel>
+</section>
 
-    <a *ngFor="let blog of blogs" routerLink="/blog/{{blog.fields.slug}}"
-        class="flex bg-white p-5 mb-5 last:mb-0 max-h-60 drop-shadow-sm rounded-lg">
+<!-- HABILIDADES -->
 
-        <div class="flex-1 mr-5 max-w-xs">
-            <img src="{{blog.fields.heroImage.fields.file.url}}" class="w-full h-full object-cover rounded-xl" />
+<section class="flex flex-col items-center justify-center w-full h-auto min-h-screen p-20">
+
+    <div class="flex flex-col items-start justify-center w-full h-auto max-w-lg mb-10" *ngFor="let x of habilidades">
+
+        <h3 class="mb-5">{{x.title}}</h3>
+
+        <ul class="flex items-center justify-start w-full h-auto">
+
+            <li class="flex items-center justify-center w-10 h-10 mr-5" *ngFor="let y of x.habilidad">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{y}}" />
+            </li>
+
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- IDIOMAS -->
+
+<section class="flex flex-col items-center justify-center w-full h-auto min-h-screen p-20">
+
+    <div class="flex flex-col items-start justify-center max-w-lg">
+        <h3 class="mb-5">Idiomas</h3>
+
+        <div class="mb-5" *ngFor="let x of idiomas">
+            <h4>{{x.title}}</h4>
+            <p>{{x.content}}</p>
         </div>
 
-        <div class="flex-1 flex-col">
-            <div class="h-3/4">
-                <h3>{{ blog.fields.title }}</h3>
-                <p>{{ blog.fields.description }}</p>
-            </div>
+    </div>
 
-            <div class="flex items-end h-1/4">
-                <p>{{blog.fields.publishDate | date}}</p>
-            </div>
-        </div>
 
-    </a>
+</section>
 
+<!-- BIOGRAFÍA -->
+
+<section class="flex flex-col items-center justify-center w-full h-auto min-h-screen p-20">
+    <div class="flex flex-col items-start justify-center max-w-lg">
+        <h4 class="mb-5">Biografía</h4>
+        <p class="mb-5">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore
+            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat.
+        </p>
+        <a href="mailto:andrestamaur@gmail.com"
+            class="flex items-center justify-center w-auto h-auto hover:bg-gray-100 hover:px-4 hover:py-2 hover:border border-gray-200 rounded-md transition-all">
+            <mat-icon class="text-gray-600">mail</mat-icon>
+            <span class="m-2 text-gray-600">andrestamaur@gmail.com</span>
+        </a>
+    </div>
 </section>

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { ContentfulService } from 'src/app/services/contentful/contentful.service';
-import { Entry } from 'contentful';
-import { Blogs } from 'src/app/interfaces/blogs';
+import { Habilidades as Hbtype } from 'src/app/interfaces/habilidades';
+import { Idiomas as Idtype } from 'src/app/interfaces/idiomas';
+import { Habilidades } from 'src/app/mocks/habilidades';
+import { Idiomas } from 'src/app/mocks/idiomas';
 
 @Component({
   selector: 'app-inicio',
@@ -9,18 +10,10 @@ import { Blogs } from 'src/app/interfaces/blogs';
   styleUrls: ['./inicio.component.scss'],
 })
 export class InicioComponent implements OnInit {
-  blogs: Entry<Blogs>[] = [];
+  habilidades: Hbtype[] = Habilidades;
+  idiomas: Idtype[] = Idiomas;
 
-  constructor(private contentfulService: ContentfulService) {}
+  constructor() {}
 
-  getBlogs() {
-    this.contentfulService.getBlogs().then((res) => {
-      this.blogs = res;
-      console.log(res);
-    });
-  }
-
-  ngOnInit(): void {
-    this.getBlogs();
-  }
+  ngOnInit(): void {}
 }

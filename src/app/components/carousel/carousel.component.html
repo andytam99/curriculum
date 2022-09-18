@@ -1,13 +1,24 @@
 <swiper [navigation]="navigation" class="mySwiper">
     <ng-template *ngFor="let slide of slides" class="p-10 md:p-20 flex-col md:flex-row" swiperSlide>
-        <div class="md:translate-x-20 w-full md:w-2/4 h-auto">
+        <div class="w-full md:w-2/4 h-auto drop-shadow-md">
             <img src="{{slide.img}}" class="w-full object-cover h-full max-h-screen" />
         </div>
-        <div class="md:-translate-x-20 p-10 w-full text-left md:w-2/4 bg-white shadow-md">
+        <div class="p-10 w-full text-left md:w-2/4">
             <h3 class="mb-4">{{slide.title}}</h3>
             <p class="mb-4 last:mb-0">
                 {{slide.text}}
             </p>
+            <div class="flex items-center justify-start w-auto h-auto mb-4">
+                <a class="transition-all bg-gray-100 rounded-md mr-4 hover:bg-gray-200 p-2 text-lg font-light text-gray-400"
+                    href="{{slide.github}}">Ver Github</a>
+                <a class="transition-all bg-gray-100 rounded-md mr-4 hover:bg-gray-200 p-2 text-lg font-light text-gray-400"
+                    href="{{slide.sitio}}">Ver Sitio</a>
+            </div>
+            <div class="flex items-center justify-start w-auto h-auto">
+                <div *ngFor="let x of slide.tech" class="w-10 h-10 drop-shadow-sm mr-2 last:mr-0">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/{{x}}" />
+                </div>
+            </div>
         </div>
     </ng-template>
 </swiper>

@@ -1,0 +1,25 @@
+<section class="min-h-screen h-auto bg-gray-100 p-10">
+
+    <h1 class="mb-5">HOME</h1>
+
+    <a *ngFor="let blog of blogs" routerLink="/blog/{{blog.fields.slug}}"
+        class="flex bg-white p-5 mb-5 last:mb-0 max-h-60 drop-shadow-sm rounded-lg">
+
+        <div class="flex-1 mr-5 max-w-xs">
+            <img src="{{blog.fields.heroImage.fields.file.url}}" class="w-full h-full object-cover rounded-xl" />
+        </div>
+
+        <div class="flex-1 flex-col">
+            <div class="h-3/4">
+                <h3>{{ blog.fields.title }}</h3>
+                <p>{{ blog.fields.description }}</p>
+            </div>
+
+            <div class="flex items-end h-1/4">
+                <p>{{blog.fields.publishDate | date}}</p>
+            </div>
+        </div>
+
+    </a>
+
+</section>
