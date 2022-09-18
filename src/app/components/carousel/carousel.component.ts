@@ -4,6 +4,7 @@ import {
   ViewChild,
   OnInit,
   Input,
+  AfterViewInit,
 } from '@angular/core';
 import { CarSlide } from 'src/app/interfaces/carousel';
 import { Experiencias } from 'src/app/mocks/experiencias';
@@ -27,6 +28,7 @@ export class CarouselComponent implements OnInit {
   navigation: NavigationOptions = {
     enabled: true,
   };
+
   constructor() {}
   ngOnInit(): void {}
 }
