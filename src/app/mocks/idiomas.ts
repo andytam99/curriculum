@@ -1,27 +1,22 @@
 export const Idiomas = [
   {
-    title: 'Español',
-    content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-  },
-  {
     title: 'English',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Fluent speaker. Learned it and used it daily since high school except from 2020 until today, having started to use Spanish more to avoid mixing languages, and loosing culture and identity.',
   },
   {
-    title: 'Português',
+    title: 'Portugues',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Leo frecuentemente en portugués no tanto por gusto sino porque no encuentro algunos libros en español y prefiero leer en idiomas latinos. No tengo ningún problema en cuanto a lectura ni en comprensión auditiva. No acostumbro a hablarlo ni a escribirlo, pero podría hacerlo de haber interés.',
   },
   {
     title: 'Italiano',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Es otro lenguaje que leo habitualmente, especialmente para leer a los autores en su propio lenguaje. No tengo dificultad alguna en entender el italiano hablado, ni el escrito. No acostumbro a hablarlo ni a escribirlo, pero no veo ninguna dificultad en comenzar a hacerlo.',
   },
   {
-    title: 'Française',
+    title: 'Francés',
     content:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      'Un lenguaje que raramente leo, pero que he leído y que entiendo en buena parte sin dificultad. No estoy muy acostumbrado a escucharlo pero cuando lo he hecho generalmente lo entiendo. Tampoco tengo experiencia hablándolo, me animaría si encuentro buenos motivos.',
   },
 ];
