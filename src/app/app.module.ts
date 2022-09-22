@@ -11,9 +11,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryDataService } from './services/data/in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,14 +58,12 @@ import { BlogsComponent } from './pages/blogs/blogs.component';
     }),
     SwiperModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, {
-      dataEncapsulation: false,
-    }),
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatTabsModule,
     MatToolbarModule,
+    MatExpansionModule,
     MatOptionModule,
     MatSelectModule,
     MatFormFieldModule,

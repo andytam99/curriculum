@@ -30,7 +30,7 @@ export const Experiencias: CarSlide[] = [
   {
     img: '/assets/domasconlogo.png',
     title: 'Domascon',
-    text: 'Sitio web de una iniciativa para un emprendimiento de comunicación que no se terminó de concretar. Desarrollado con el framework de desarrollo Svelte junto con Vercel como Hosting.',
+    text: 'Sitio web de una iniciativa para un emprendimiento de comunicación que no se terminó de concretar. Desarrollado con el framework de desarrollo Svelte junto con Vercel como Hosting. Utilizaba Supabase como Backend.',
     github: 'https://github.com/andytam99/domascon',
     sitio: 'https://domascon.vercel.app/',
     tech: [
