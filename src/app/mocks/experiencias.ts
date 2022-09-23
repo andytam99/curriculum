@@ -58,7 +58,7 @@ export const Experiencias: CarSlide[] = [
     title: 'Club Humanista',
     text: 'Sitio web de una iniciativa para una organización social de naturalismo en desarrollo. Desarrollado con el framework de desarrollo Angular.',
     github: 'https://github.com/andytam99/humanos',
-    sitio: '',
+    sitio: 'https://clubhumanista-bc796.web.app/',
     tech: [
       'angularjs/angularjs-original.svg',
       'typescript/typescript-original.svg',
