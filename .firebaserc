@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "curriculum-7f931": {
+      "hosting": {
+        "curriculum": [
+          "curriculum-7f931"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "curriculum-7f931"
+  }
+}

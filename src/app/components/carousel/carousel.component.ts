@@ -19,8 +19,8 @@ SwiperCore.use([Navigation]);
   templateUrl: './carousel.component.html',
   styleUrls: [
     './carousel.component.scss',
-    '../../../../node_modules/swiper/swiper.min.css',
-    '../../../../node_modules/swiper/modules/navigation/navigation.min.css',
+    '../../../../node_modules/swiper/swiper.scss',
+    '../../../../node_modules/swiper/modules/navigation/navigation.scss',
   ],
   encapsulation: ViewEncapsulation.None,
 })
