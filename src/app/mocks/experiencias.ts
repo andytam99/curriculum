@@ -54,6 +54,19 @@ export const Experiencias: CarSlide[] = [
     ],
   },
   {
+    img: '/assets/diarioconsciencia.png',
+    title: 'Diario Consciencia',
+    text: 'Un blog personal aún en desarrollo, tanto el software como las ideas. Desarrollado con Angular Universal, con Vercel como Hosting, y un headless CMS en el Backend.',
+    github: 'https://github.com/andytam99/diarioconsciencia',
+    sitio: 'https://diarioconsciencia.com',
+    tech: [
+      'angularjs/angularjs-original.svg',
+      'typescript/typescript-original.svg',
+      'tailwindcss/tailwindcss-plain.svg',
+      'sass/sass-original.svg',
+    ],
+  },
+  {
     img: '/assets/clubhumanistalogo.png',
     title: 'Club Humanista',
     text: 'Sitio web de una iniciativa para una organización social de naturalismo en desarrollo. Desarrollado con el framework de desarrollo Angular.',
